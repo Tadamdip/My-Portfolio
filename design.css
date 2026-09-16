@@ -533,3 +533,69 @@ body {
 .certificate-scroll::-webkit-scrollbar-thumb:hover {
     background: #888;
 }
+
+.top-nav {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 1000;
+    background: transparent;
+}
+
+#mode-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    border: 1px solid #222;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #222222;
+    font: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#mode-toggle:hover {
+    background: #222222;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.mode-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+body {
+    color: #222222;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #151515;
+    color: #eeeeee;
+}
+
+body.dark-mode #mode-toggle {
+    border-color: #eeeeee;
+    background: #252525;
+    color: #ffffff;
+}
+
+body.dark-mode #mode-toggle:hover {
+    background: #ffffff;
+    color: #222222;
+}
+
+body.dark-mode .about,
+body.dark-mode .experience,
+body.dark-mode .tech-stack,
+body.dark-mode .myProjects,
+body.dark-mode .myCertificates,
+body.dark-mode .myPhotos,
+body.dark-mode .bottom-section {
+    background-color: #222222;
+    color: #eeeeee;
+}
