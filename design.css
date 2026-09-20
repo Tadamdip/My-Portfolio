@@ -637,3 +637,443 @@ body.dark-mode #mode-toggle {
 body.dark-mode .stack-card {
     background-color: #242424a8;
 }
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+iframe {
+    max-width: 100%;
+}
+
+/* Allow grid and flex children to shrink correctly */
+.profile-text,
+.content-grid > *,
+.stack-row > *,
+.bottom-section > * {
+    min-width: 0;
+}
+
+@media (max-width: 700px) {
+
+    /* Theme button */
+    .top-nav {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        z-index: 1000;
+        background: transparent;
+    }
+
+    #mode-toggle {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    /* Profile */
+    .profile-info {
+        width: calc(100% - 32px);
+        max-width: none;
+        margin: 80px auto 32px;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .profile-image {
+        width: 140px;
+        height: 140px;
+    }
+
+    .profile-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .myName {
+        justify-content: center;
+        flex-wrap: wrap;
+        font-size: 26px;
+        line-height: 1.2;
+    }
+
+    .location {
+        justify-content: center;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .role {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+
+    .contact-button {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #btn-email,
+    #btn-tel {
+        min-height: 42px;
+        padding: 7px 12px;
+        justify-content: center;
+    }
+
+    /* About and Experience */
+    .content-grid {
+        width: calc(100% - 32px);
+        max-width: none;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .about,
+    .experience {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .about p,
+    .experience li {
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .lista {
+        margin-bottom: 0;
+        padding-left: 20px;
+    }
+
+    /* Tech Stack */
+    .tech-stack {
+        width: calc(100% - 32px);
+        max-width: none;
+        margin: 38px auto;
+        padding: 0;
+    }
+
+    .tech-title {
+        margin-bottom: 25px;
+    }
+
+    .stack-row,
+    .mobile-row,
+    .web-row,
+    .tools-row {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 28px;
+    }
+
+    /* Display every category title above its card */
+    .stack-label {
+        order: -1;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        gap: 0;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    /* Decorative arrows consume too much space on phones */
+    .stack-label > span {
+        display: none;
+    }
+
+    .stack-card {
+        width: 100%;
+        max-width: none;
+        min-height: auto;
+        padding: 18px 12px;
+    }
+
+    .tech-icons {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .tech-icons span {
+        width: 58px;
+        height: 65px;
+    }
+
+    .tech-icons img {
+        max-width: 50px;
+        max-height: 50px;
+        object-fit: contain;
+    }
+
+    /* Projects and Certificates */
+    .project-certificate-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .myProjects,
+    .myCertificates {
+        width: 100%;
+        height: auto;
+        padding: 18px;
+        overflow: visible;
+    }
+
+    /*
+       Remove nested vertical scrolling on mobile.
+       The normal page scrollbar is easier to use.
+    */
+    .project-scroll,
+    .certificate-scroll {
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        padding-right: 0;
+    }
+
+    .project-item,
+    .certificate-item {
+        width: 100%;
+        margin-bottom: 18px;
+    }
+
+    .project-item img,
+    .certificate-item img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: none;
+    }
+
+    /* Photo carousel */
+    .myPhotos {
+        width: calc(100% - 32px);
+        max-width: none;
+        margin: 32px auto;
+        padding: 18px;
+    }
+
+    .photo-item {
+        width: 180px;
+        height: 120px;
+    }
+
+    .photo-track {
+        gap: 24px;
+    }
+
+    /* Social links and map */
+    .bottom-section {
+        width: calc(100% - 32px);
+        max-width: none;
+        margin: 32px auto;
+        padding: 0;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 28px;
+    }
+
+    .mySocialLink {
+        width: 100%;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .mySocialLink ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 18px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .myLocation {
+        width: 100%;
+    }
+
+    .map-container {
+        width: 100%;
+        max-width: 380px;
+        height: 220px;
+    }
+}
+
+/* Additional adjustments for very narrow phones */
+@media (max-width: 420px) {
+
+    .profile-info,
+    .content-grid,
+    .tech-stack,
+    .myPhotos,
+    .bottom-section {
+        width: calc(100% - 24px);
+    }
+
+    .myName {
+        font-size: 24px;
+    }
+
+    .role {
+        font-size: 17px;
+    }
+
+    .about,
+    .experience,
+    .myProjects,
+    .myCertificates,
+    .myPhotos {
+        padding: 16px;
+    }
+
+    .contact-button {
+        gap: 8px;
+    }
+
+    #btn-email,
+    #btn-tel {
+        flex: 1 1 auto;
+    }
+
+    .stack-label {
+        font-size: 24px;
+    }
+
+    .stack-card {
+        padding: 15px 8px;
+    }
+
+    .tech-icons {
+        gap: 4px;
+    }
+
+    .tech-icons span {
+        width: 52px;
+        height: 58px;
+    }
+
+    .tech-icons img {
+        max-width: 44px;
+        max-height: 44px;
+    }
+
+    .map-container {
+        height: 190px;
+    }
+}
+
+/* Respect visitors who disable animations */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+    .photo-window {
+        overflow-x: auto;
+    }
+
+    .photo-track {
+        animation: none;
+    }
+}
+/* Social account list */
+.mySocialLink ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+
+    margin: 0;
+    padding: 0;
+
+    /* We create our own dots below */
+    list-style: none;
+}
+
+/* Each social account */
+.mySocialLink li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Clickable icon */
+.mySocialLink a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    padding: 8px;
+    border-radius: 12px;
+
+    background-color: #ffffff;
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.mySocialLink a img {
+    display: block;
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+
+    transition: transform 0.2s ease;
+}
+
+/* Mouse hover */
+.mySocialLink a:hover {
+    transform: translateY(-5px);
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+.mySocialLink a:hover img {
+    transform: scale(1.12);
+}
+
+/* Keyboard accessibility */
+.mySocialLink a:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 3px;
+}
+
+/* Dark mode */
+
+body.dark-mode .mySocialLink a {
+    background-color: #333333;
+}
+
+body.dark-mode .mySocialLink a:hover {
+    background-color: #444444;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+}
