@@ -1077,3 +1077,43 @@ body.dark-mode .mySocialLink a:hover {
     background-color: #444444;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
 }
+/* Smooth transition between light and dark map */
+.map-container,
+.map-container iframe,
+.myLocation h3 img,
+.location-icon{
+    transition:
+        filter 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* Light mode map */
+.map-container {
+    background-color: #ffffff;
+}
+
+/* Dark mode map container */
+body.dark-mode .map-container {
+    background-color: #222222;
+    border-color: #555555;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Convert the Google map into a dark-looking map */
+body.dark-mode .map-container iframe {
+    filter:
+        invert(90%)
+        hue-rotate(180deg)
+        brightness(85%)
+        contrast(90%);
+}
+
+/* Turn the black location icon white */
+body.dark-mode .myLocation h3 img {
+    filter: invert(1) brightness(2);
+}
+ body.dark-mode .location-icon {
+    filter: invert(1) brightness(2);
+} 
